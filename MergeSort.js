@@ -55,7 +55,7 @@ function divide(num){
     let middle = Math.floor(num.length/2)
     let left = num.slice(0,middle)
     let right = num.slice(middle)
-    return sorted(divide(divide(left), divide(right)))
+    return sorted(divide(left), divide(right))
 }
 
 function sorted(left, right){
