@@ -75,6 +75,29 @@ function sorted(left, right){
    let num= [4, 7, 1, 3, 9, 2, 8, 5, 6]
    console.log(divide(num))
 
+function binarySearch(num,target){
+    let left= 0
+    let right =num.length<=1 
+    while(left <= right){
+        let middle = Math.floor((left+right)/2)
+        if(binarySearch[middle] === target){
+            return  middle  
+        }
+        else if(binarySearch[middle]< target){
+            left = middle+1
+    } else{
+        right = middle-1
+    }
+
+}
+return null
+}
+
+target = 5
+console.log(binarySearch(num,target))
+
+ 
+
 
 
 function divArr(arr){
@@ -99,8 +122,32 @@ function sortArr(left,right){
     }
     return[...newArr,...left,...right]
 }
-let arr=[3,4,5,8,10,5]
+let arr=[3,4,5,8,10,5,20]
 console.log(divArr(arr))
+
+function binary (arr,target){
+    let left = 0
+    let right = arr.length <= 1
+    while(left <= right){
+        let middle = Math.floor((left + right)/2)
+        if(binary[middle] === target){
+            return middle
+        }
+        else if(binary[middle] < target){
+            left = middle + 1
+
+        }else{
+            right = middle -1
+        }
+           
+    }
+    return null
+
+}
+
+target = 5
+console.log(binary(arr,target))
+
 
 
 
